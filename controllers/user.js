@@ -10,7 +10,11 @@ async function register(login, password) {
 
   const passwordHash = await bcrypt.hash(password, 10);
 
-  const user = await User.create({ login, password: passwordHash });
+  const user = await User.create({
+    login,
+    password: passwordHash,
+    role: ROLES.USER,
+  });
 
   const token = generate({ id: user.id });
 
