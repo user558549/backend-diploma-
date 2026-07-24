@@ -10,6 +10,5 @@ router.use(
 );
 router.use("/", require("./auth"));
 router.use("/rooms", require("./room"));
-router.use("/users", require("./user"));
 
 module.exports = router;
