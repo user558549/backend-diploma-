@@ -8,7 +8,7 @@ router.use(
     credentials: true,
   }),
 );
-router.use("/api", require("./auth"));
-router.use("/api/rooms", require("./room"));
+router.use("/", require("./auth"));
+router.use("/rooms", require("./room"));
 
 module.exports = router;
