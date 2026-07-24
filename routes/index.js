@@ -4,7 +4,7 @@ const cors = require("cors");
 const router = express.Router({ mergeParams: true });
 router.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
   }),
 );
